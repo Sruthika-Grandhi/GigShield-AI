@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>GigShield AI</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+<!-- 🔹 SIDEBAR -->
+<div id="sidebar">
+    <h3>Menu</h3>
+    <p onclick="showHome()">🏠 Home</p>
+    <p onclick="showHistory()">📜 Claim History</p>
+    <p onclick="showProfile()">👤 Profile</p>
+</div>
+
+<!-- 🔹 HEADER -->
+<div class="top-header">
+
+    <div id="menuIcon" onclick="toggleMenu()">☰</div>
+
+    <div class="center-title">
+        <h1>GigShield AI</h1>
+        <p>AI-Powered Insurance for Gig Workers</p>
+    </div>
+
+    <div id="logoutText" onclick="logout()" style="display:none;">
+        Logout
+    </div>
+
+</div>
+
+<!-- 🔐 AUTH -->
+<div id="auth">
+    <h2 id="formTitle">Login</h2>
+
+    <input type="email" id="email" placeholder="Enter Email"><br><br>
+    <input type="password" id="password" placeholder="Enter Password"><br><br>
+
+    <button onclick="login()">Continue</button>
+
+    <p onclick="toggleForm()" class="link">
+        Don't have an account? Sign up
+    </p>
+</div>
+
+<!-- 🏠 DASHBOARD -->
+<div id="dashboard" style="display:none;">
+    <h2>Welcome Delivery Partner 🚴</h2>
+
+    <p><b>Weekly Premium:</b> ₹<span id="premiumDisplay">50</span></p>
+    <p><b>Coverage:</b> Income loss due to disruptions</p>
+
+    <hr>
+
+    <button onclick="demoMode()">🎬 Demo Mode</button>
+
+    <hr>
+
+    <h3>Live Conditions</h3>
+    <p id="rainStatus">🌧 Rain: Normal</p>
+    <p id="heatStatus">🔥 Heat: Normal</p>
+    <p id="pollutionStatus">🌫 AQI: Moderate</p>
+    <p id="protectionStatus">🟢 Protection Active</p>
+
+    <hr>
+
+    <h3>Simulate Disruption</h3>
+    <button onclick="triggerDisruption('Heavy Rain')">🌧 Heavy Rain</button>
+    <button onclick="triggerDisruption('Extreme Heat')">🔥 Extreme Heat</button>
+    <button onclick="triggerDisruption('High Pollution')">🌫 High Pollution</button>
+
+    <hr>
+
+    <h3>Adjust Coverage</h3>
+    <input type="range" min="1000" max="5000" value="3000" id="coverageSlider">
+
+    <p>Coverage: ₹<span id="coverageValue">3000</span></p>
+    <p>Weekly Premium: ₹<span id="premiumValue">50</span></p>
+    <p id="riskLevel">Risk: Medium</p>
+
+    <hr>
+
+    <h3>Your Stats</h3>
+    <p>💰 Earnings Protected: ₹1200</p>
+    <p>⏱ Hours Saved: 8 hrs</p>
+    <p>📅 Active Coverage: ON</p>
+
+    <hr>
+
+    <h3>Why this premium?</h3>
+    <p>✔ High rainfall risk (+₹10)</p>
+    <p>✔ Peak delivery hours (+₹5)</p>
+    <p>✔ Low fraud history (-₹3)</p>
+</div>
+
+<!-- 📜 HISTORY -->
+<div id="history" style="display:none;">
+    <h2>📜 Claim History</h2>
+
+    <p>🌧 12 Mar – ₹300 – Approved</p>
+    <p>🔥 15 Mar – ₹200 – Approved</p>
+    <p>🌫 18 Mar – ₹150 – Under Review</p>
+</div>
+
+<!-- 👤 PROFILE -->
+<div id="profile" style="display:none;">
+    <h2>👤 Profile</h2>
+
+    <input type="text" id="name" placeholder="Name"><br><br>
+    <input type="email" id="profileEmail" placeholder="Email"><br><br>
+    <input type="text" id="zone" placeholder="Work Zone"><br><br>
+    <input type="text" id="hours" placeholder="Preferred Hours"><br><br>
+
+    <button onclick="saveProfile()">💾 Save</button>
+
+    <p id="saveMsg"></p>
+</div>
+
+<!-- 💰 CLAIM -->
+<div id="claim" style="display:none;">
+    <h2>✅ Claim Auto-Triggered</h2>
+
+    <p id="reason"></p>
+    <p id="amount"></p>
+
+    <p>✔ AI detected disruption</p>
+    <p>✔ No manual claim needed</p>
+
+    <hr>
+
+    <h3>AI Verification</h3>
+    <p id="gpsCheck">Checking GPS...</p>
+    <p id="activityCheck">Checking delivery activity...</p>
+    <p id="fraudCheck">Analyzing fraud risk...</p>
+
+    <button onclick="goBack()">⬅ Back to Dashboard</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

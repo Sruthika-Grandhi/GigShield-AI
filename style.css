@@ -1,0 +1,158 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: white;
+
+    background: url("https://images.unsplash.com/photo-1504384308090-c894fdcc538d") no-repeat center center/cover;
+}
+
+/* 🔹 HEADER */
+.top-header {
+    position: relative;
+    text-align: center;
+    padding: 20px;
+}
+
+.center-title h1 {
+    margin: 0;
+    font-size: 45px;
+}
+
+.center-title p {
+    margin: 0;
+    font-size: 20px;
+    opacity: 0.8;
+}
+
+/* ☰ LEFT */
+#menuIcon {
+    position: absolute;
+    left: 20px;
+    top: 25px;
+
+    font-size: 26px;
+    color: white;
+    cursor: pointer;
+
+    z-index: 9999;
+}
+
+/* LOGOUT RIGHT */
+#logoutText {
+    position: absolute;
+    right: 30px;
+    top: 25px;
+
+    color: white;
+    font-size: 25px;
+    cursor: pointer;
+
+    opacity: 0.8;
+    transition: 0.3s;
+}
+
+#logoutText:hover {
+    text-shadow: 
+        0 0 8px rgba(255, 255, 255, 0.8),
+        0 0 15px rgba(255, 255, 255, 0.6),
+        0 0 25px rgba(255, 255, 255, 0.4);
+
+    transform: scale(1.05);
+}
+
+/* 🔹 DARK OVERLAY */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0, 0, 0, 0.65);
+
+    z-index: 0;
+    pointer-events: none;
+}
+
+/* 🔹 CARDS */
+#auth, #dashboard, #claim, #history, #profile {
+    background: rgba(255, 255, 255, 0.12);
+    margin: 60px auto;
+    padding: 40px;
+
+    width: 90%;
+    max-width: 700px;
+
+    border-radius: 20px;
+    backdrop-filter: blur(15px);
+
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.6);
+    text-align: center;
+}
+
+/* INPUTS */
+input {
+    padding: 12px;
+    width: 85%;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+}
+
+/* BUTTONS */
+button {
+    padding: 12px 20px;
+    margin: 10px;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(45deg, #00c6ff, #0072ff);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+/* LINK */
+.link {
+    cursor: pointer;
+    color: #00c6ff;
+}
+
+/* 🔹 SIDEBAR */
+#sidebar {
+    position: fixed;
+    top: 0;
+    left: -250px;
+
+    width: 250px;
+    height: 100%;
+
+    background: rgba(0,0,0,0.95);
+    color: white;
+
+    padding: 20px;
+ padding-top: 80px;  
+    transition: 0.3s;
+
+    z-index: 9998;
+}
+
+#sidebar p {
+    cursor: pointer;
+    margin: 15px 0;
+}
+#sidebar h3 {
+    margin-bottom: 20px;
+    font-size: 20px;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+    padding-bottom: 10px;
+}
+#sidebar p:hover {
+    color: #00c6ff;
+}
