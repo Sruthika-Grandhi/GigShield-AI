@@ -14,8 +14,6 @@ GigShield-AI is a project that provides an AI-driven parametric insurance platfo
 ## Tech Stack
 
 - **Frontend:** HTML, CSS, JavaScript
-- **Backend:** (Add backend details if applicable)
-- **AI/ML:** (Add AI/ML framework if used)
 - **Version Control:** Git & GitHub
 
 ## Installation
